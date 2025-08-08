@@ -4,6 +4,7 @@ const serverless = require('serverless-http');
 
 const app = Waline({
   env: 'netlify',
+  pathValidator: (path) => !!path,
   async postSave(comment) {
     // do what ever you want after save comment
   },
