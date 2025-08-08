@@ -1,6 +1,8 @@
 [functions]
   directory = "netlify/functions/"
+  
 [[redirects]]
   from = "/comment/*"
   to = "/.netlify/functions/comment/:splat"
   status = 200
+  force = false
