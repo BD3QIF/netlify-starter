@@ -2,5 +2,5 @@
   directory = "netlify/functions/"
 [[redirects]]
   from = "/*"
-  to = "/.netlify/functions/comment/:splat"
+  to = "/.netlify/functions/:splat"
   status = 200
