@@ -2,13 +2,13 @@
   directory = "netlify/functions/"
   
 [[redirects]]
-  from = "/comment/*"
-  to = "/.netlify/functions/comment/:splat"
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
   status = 200
   force = false
 
 [[headers]]
-  for = "/comment/*"
+  for = "/api/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET, POST, OPTIONS"
