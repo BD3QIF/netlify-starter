@@ -8,13 +8,8 @@ const handleRequest = async (request) => {
         const pathname = url.pathname;
         const search = url.search;
 
-        return new Response(JSON.stringify({ url, pathname, search }), {
-            status: 404,
-            headers: { 'Content-Type': 'application/json' }
-        });
-
         // 1. 检查请求路径
-        if (pathname !== "/api/v1/client/subscribe") {
+        if (pathname !== "/api/v1/client/subscribe" && !pathname.endsWith("/api/v1/client/subscribe")) {
             return new Response(JSON.stringify({ code: 404, message: "Resource Not Found" }), {
                 status: 404,
                 headers: { 'Content-Type': 'application/json' }
