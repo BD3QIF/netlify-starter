@@ -2,13 +2,13 @@
   directory = "netlify/functions/"
 
 [[redirects]]
-  from = "/comment/*"
-  to = "/.netlify/functions/comment/:splat"
+  from = "/*"
+  to = "/.netlify/functions/:splat"
   status = 200
   force = false
 
 [[headers]]
-  for = "/comment/*"
+  for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Credentials = "true"
