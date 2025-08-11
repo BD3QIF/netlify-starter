@@ -1,2 +1,16 @@
 [functions]
   directory = "netlify/functions/"
+
+[[redirects]]
+  from = "/comment/*"
+  to = "/.netlify/functions/comment/:splat"
+  status = 200
+  force = false
+
+[[headers]]
+  for = "/comment/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Credentials = "true"
+    Access-Control-Allow-Headers = "Content-Type, Authorization, X-Requested-With"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS,HEAD"
